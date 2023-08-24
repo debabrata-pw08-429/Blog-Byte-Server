@@ -6,7 +6,8 @@ const authRouter = require("./routes/auth.route");
 const blogRouter = require("./routes/blogpost.route");
 const cookieParser = require("cookie-parser");
 const app = express();
-const sequelize = require("./config/connection");
+// const sequelize = require("./config/connection");
+const db = require("./models");
 
 // USE_
 app.use(cors({ origin: "http://localhost:3000", credentials: true }));
@@ -23,7 +24,7 @@ app.get("/", async (req, res) => {
 
 // LISTEN_
 const port = 8080;
-sequelize.sync().then(() => {
+db.sequelize.sync().then(() => {
   app.listen(port, () => {
     console.log("---------------------------");
     console.log("Listening to port : " + port);

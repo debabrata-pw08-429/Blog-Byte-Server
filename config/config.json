@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": null,
-    "database": "database_development",
-    "host": "127.0.0.1",
+    "username": "admin",
+    "password": "password888",
+    "database": "blogdb",
+    "host": "database-1.cfwbui4fxbnc.eu-north-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {
@@ -14,10 +14,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "admin",
+    "password": "password888",
+    "database": "blogdb",
+    "host": "database-1.cfwbui4fxbnc.eu-north-1.rds.amazonaws.com",
     "dialect": "mysql"
   }
 }
