@@ -1,15 +1,14 @@
 const express = require("express");
 const blogRouter = express.Router();
-const BlogPost = require("../models/blog.model");
-const UserModel = require("../models/user.model");
+const { User, BlogPost } = require("../models");
 
 blogRouter.get("/blogposts", async (req, res) => {
   try {
-    UserModel.hasMany(BlogPost, { foreignKey: "userID" });
-    BlogPost.belongsTo(UserModel, { foreignKey: "userID" });
+    User.hasMany(BlogPost, { foreignKey: "userID" });
+    BlogPost.belongsTo(User, { foreignKey: "userID" });
 
     const data = await BlogPost.findAll({
-      include: [UserModel],
+      include: [User],
     });
 
     res.status(200).json({

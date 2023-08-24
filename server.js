@@ -6,7 +6,6 @@ const authRouter = require("./routes/auth.route");
 const blogRouter = require("./routes/blogpost.route");
 const cookieParser = require("cookie-parser");
 const app = express();
-// const sequelize = require("./config/connection");
 const db = require("./models");
 
 // USE_

@@ -1,11 +1,11 @@
-const userDb = require("../models/user.model");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const salt = 10;
 const secret = "xyz@niu3h2!";
+const { User } = require("../models");
 
 async function addUser({ username, email, password }) {
-  let added = await userDb.create({
+  let added = await User.create({
     username,
     email,
     password: bcrypt.hashSync(password, salt),
@@ -14,7 +14,7 @@ async function addUser({ username, email, password }) {
 }
 
 async function findUser({ email, password }) {
-  let res = await userDb.findOne({ email });
+  let res = await User.findOne({ email });
   let passOk = bcrypt.compareSync(password, res.password);
 
   if (passOk) {
@@ -25,7 +25,7 @@ async function findUser({ email, password }) {
 }
 
 async function getToken({ email, password }) {
-  let res = await userDb.findOne({ email });
+  let res = await User.findOne({ email });
   let user = res.toJSON();
 
   if (user.password) {
