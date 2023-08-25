@@ -7,10 +7,10 @@
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
+    "username": "admin",
+    "password": "password888",
+    "database": "blogdb",
+    "host": "database-1.cfwbui4fxbnc.eu-north-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "production": {

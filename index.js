@@ -9,9 +9,9 @@ const app = express();
 const db = require("./models");
 
 // USE_
-app.use(cors({ origin: "http://localhost:3000", credentials: true }));
-app.use(morgan("tiny"));
 app.use(express.json());
+app.use(cors());
+app.use(morgan("tiny"));
 app.use(cookieParser());
 app.use(authRouter);
 app.use(blogRouter);
