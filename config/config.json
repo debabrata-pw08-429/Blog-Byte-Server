@@ -1,23 +1,23 @@
 {
   "development": {
     "username": "admin",
-    "password": "password888",
-    "database": "blogdb",
-    "host": "database-1.cfwbui4fxbnc.eu-north-1.rds.amazonaws.com",
+    "password": "password777",
+    "database": "blogDB",
+    "host": "database-1.cxqmnven2osa.ap-south-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {
     "username": "admin",
-    "password": "password888",
-    "database": "blogdb",
-    "host": "database-1.cfwbui4fxbnc.eu-north-1.rds.amazonaws.com",
+    "password": "password777",
+    "database": "blogDB",
+    "host": "database-1.cxqmnven2osa.ap-south-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "production": {
     "username": "admin",
-    "password": "password888",
-    "database": "blogdb",
-    "host": "database-1.cfwbui4fxbnc.eu-north-1.rds.amazonaws.com",
+    "password": "password777",
+    "database": "blogDB",
+    "host": "database-1.cxqmnven2osa.ap-south-1.rds.amazonaws.com",
     "dialect": "mysql"
   }
 }
